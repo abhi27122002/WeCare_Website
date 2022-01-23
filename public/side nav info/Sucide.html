@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons links--->
+    <!-- Font Awesome -->
+   
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icons links over--->
+
+    <!-- css links--->
+    <link rel="stylesheet" href="Common\index.css">
+    <link rel="stylesheet" href="Common\Responsive.css">
+    <link rel="stylesheet" href="Common\addiction.css">
+    <link rel="stylesheet" href="Common/Add.css">
+    <!-- Script links--->
+    <script src="Common\index.js"></script>
+    <title>WeCare</title>
+</head>
+<body>
+    <body id="body">
+        <header1 class="header1" id="header1">
+            <!-- MENU icons code--->
+    
+            <div class="menu_box_">
+                <div>
+                    <button class="btn btn-light" onclick="openNav()"> 
+                          ☰
+                        </button>
+                </div>
+            </div>
+            <!-- Menu-->
+    
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html">
+                <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+            </a>
+    
+    
+    
+    
+            <div class="SingUp_bar">
+                <div>
+                    <div class="dropdown1">
+                        <button class="dropbtn1">
+                                <i class="material-icons" style="font-size:24px">account_circle</i>
+                              </button>
+                        <div class="dropdown-content1">
+                            <a href="#modal2" class="modal-trigger">Login</a>
+                            <a href="#modal1" class="modal-trigger">SignUp</a>
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <!-- sing up Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Sign Up</h4>
+                    <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                        <input type="email" name="" id="signUpEmail" placeholder="email" />
+    
+                        <input type="password" id="signUpPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+    
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+    
+    
+    
+            <!-- log in up Modal Structure -->
+            <div id="modal2" class="modal" onsubmit="login(event)">
+                <div class="modal-content">
+                    <h4>Login</h4>
+                    <form action="" autocomplete="off">
+                        <input type="email" name="" id="LoginEmail" placeholder="email" />
+    
+                        <input type="password" id="LoginPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+            </div>
+    
+        </header1>
+    
+        <!-- SideNav Code-->
+        <div id="mySideNav" class="SideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+            <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Addiction_.html">Addication</a>
+                    <a href="Stress_.html">Stress</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sucide.html">Suicide</a>
+                    <a href="Depression.html">Depression</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+                <hr>
+            </h5>
+            <div class="col2">
+    
+                <div class="sidemenu1">
+                    <a href="Communication.html">Communication</a>
+                   
+                </div>
+                <div class="sidemenu1">
+                    <a href="Friendship.html">Friendship</a>
+                    
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Happyness.html">Happiness</a>
+                    <a href="Meditation.html">Meditation</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sleep_.html">Sleep</a>
+                    <a href="Career_.html">Career</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+                <hr>
+            </h5>
+            <div class="col2">
+                    <a href="ContactUs.html">Contact Us</a>
+            </div>
+        </div>
+        <!-- SideNav Ends-->
+        <!-- SideNav Ends-->
+        <section>
+
+            <div class="container" style="margin-top:3%; width: 80%">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 style="padding-top:10%;">Suicide and Prevention</h2>
+                        <p style="font-size: 18px; ">If you’re feeling suicidal, you may be afraid you’ll be judged or that no one will understand. If you’re worried about someone else, you may fear that you’ll say the wrong thing. But talking openly can save a life. Don’t wait: reach out.</p>
+                    </div>
+                    <div class="col-md-5" style="text-align:right;">
+                        <img src="https://www.helpguide.org/wp-content/uploads/suicide-360.jpg" alt="suicide">
+                    </div>
+                    <div>
+                    </div>
+        </section>
+        <br><br>
+        <div style="width:100% ; height: 6px;  background-color: burlywood;"></div>
+      <div class="addBody">
+        <!--youtube video-->
+        
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/AvjMa9kqlCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 7vh;"></iframe>
+<div class="aligment">
+    <div class="book">
+        <img src="https://cdn.asaha.com/assets/thumbs/494/494ca9dea65bcbf7893727e50f8406a9.jpg" alt="">
+        <h5>Download ebook</h5>
+        <p>"Change your brain ,Change your life"</p>
+        <a href="#" onclick="window.open('Change Your Brain, Change your life.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+    </div>
+
+    <div class="book">
+            <img src="https://cdn.asaha.com/assets/thumbs/550/55034fae095244af493de3d73257d50c.jpg" alt="">
+            <h5>Download ebook</h5>
+            <p>"Telling Yourself the Truth"</p>
+            <a href="#" onclick="window.open('Books/Telling Yourself the Truth.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+    </div>
+
+    <div class="book">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41lYi1XTrYS._SX324_BO1,204,203,200_.jpg" alt="">
+        <h5>Order from Amazon</h5>
+        <p>"Death is not the answer"</p>
+        <a href="https://www.amazon.in/dp/8184007426/ref=cm_sw_em_r_mt_dp_ZQ0K79QWNQ3W4PDP2VP9" >Click here</a>
+</div>
+</div>
+<h2>Introduction</h2>
+<p>Suicide is a major public health concern. In 2019, suicide was the 10th leading cause of death overall in the United States, claiming the lives of over 47,500 people. Suicide is complicated and tragic, but it is often preventable. Knowing the warning signs for suicide and how to get help can help save lives.</p>
+<div class="labels">
+<h5><a href="#sucide">What is sucide?</a> || <a href="#warning">Warning signs </a> || <a href="#Risk">Risk Factors</a> ||  <a href="#Therapy">Treatments and Therapies</a></h5>
+</div>
+<h3>
+ <a name="sucide">What is sucide?</a>
+</h3>
+<p>A suicide attempt is when people harm themselves with the goal of ending their life, but they do not die.
+
+    Avoid using terms such as “committing suicide,” “successful suicide,” or “failed suicide” when referring to suicide and suicide attempts, as these terms often carry negative meanings.</p>
+<h3>
+<div>
+<a  name="warning">Warning Signs</a>
+</div>
+</h3>
+<p>Warning signs that someone may be at immediate risk for attempting suicide include:</p>
+<div style="margin-left: 2.6%;">
+<ol type="1">
+    <li>Talking about wanting to die or wanting to kill themselves</li>
+    <li>Talking about feeling empty or hopeless or having no reason to live</li>
+    <li>Talking about feeling trapped or feeling that there are no solutions</li>
+    <li>Feeling unbearable emotional or physical pain</li>
+    <li>Talking about being a burden to others</li>
+    <li>Giving away important possessions</li>
+    <li>Saying goodbye to friends and family</li>
+    <li>Putting affairs in order, such as making a will</li>
+    <li>Taking great risks that could lead to death, such as driving extremely fast</li>
+    <li>Talking or thinking about death often</li>
+  </ol>  
+  <p>It is important to note that suicide is not a normal response to stress.<b>Suicidal thoughts or actions are a sign of extreme distress and should not be ignored.</b> If these warning signs apply to you or someone you know, get help as soon as possible, particularly if the behavior is new or has increased recently.</p>
+</div>
+<h3>
+<div>
+    <a  name="Risk">Risk Factors</a>
+</div>
+</h3>
+<p>Suicide does not discriminate. People of all genders, ages, and ethnicities can be at risk. Suicidal behavior is complex, and there is no single cause</p>
+<p>The main Risk factors are :</p>
+<div style="margin-left: 2.6%;">
+    <ol type="1">
+        <li>Depression, other mental disorders, or substance use disorder</li>
+        <li>Chronic pain</li>
+        <li>A history of suicide attempts</li>
+        <li>Family history of a mental disorder or substance use</li>
+        <li>Family history of suicide</li>
+        <li>Exposure to family violence, including physical or sexual abuse</li>
+        <li>Presence of guns or other firearms in the home</li>
+        <li>Having recently been released from prison or jail</li>
+        <li>Exposure, either directly or indirectly, to others' suicidal behavior, such as that of family members, peers, or celebrities</li>
+      </ol>  
+      <p>Most people who have risk factors will not attempt suicide, and it is difficult to tell who will act on suicidal thoughts. Although risk factors for suicide are important to keep in mind, someone who is showing warning signs of suicide may be at higher risk for danger and need immediate attention.</p>
+      <p>Stressful life events (such as the loss of a loved one, legal troubles, or financial difficulties) and interpersonal stressors (such as shame, harassment, bullying, discrimination, or relationship troubles) may contribute to suicide risk, especially when they occur along with suicide risk factors.</p>
+      <p>Family and friends are often the first to recognize the warning signs of suicide, and they can take the first step toward helping a loved one find mental health treatment.</p>
+</div>
+
+
+<h3>
+<div>
+<a  name="Therapy">Treatments and Therapies</a>
+</div>
+</h3>
+<p>Effective, evidence-based interventions are available to help people who are at risk for suicide:</p>
+<p><b>Brief Interventions</b></p>
+<p>1] <b>Safety Planning:</b> Personalized safety planning has been shown to help reduce suicidal thoughts and actions. Patients work with a caregiver to develop a plan that describes ways to limit access to lethal means such as firearms, pills, or poisons. The plan also lists coping strategies and people and resources that can help in a crisis.</p>
+<p>2]<b>Follow-up phone calls :</b> Research has shown that when at-risk patients receive further screening, a Safety Plan intervention, and a series of supportive phone calls, their risk of suicide goes down.</p>
+<p><b>Psychotherapies</b></p>
+<p>Multiple types of psychosocial interventions have been found to help individuals who have attempted suicide (see below). These types of interventions may prevent someone from making another attempt.</p>
+<p>1]<b>Cognitive Behavioral Therapy (CBT)</b>can help people learn new ways of dealing with stressful experiences. CBT helps individuals recognize their thought patterns and consider alternative actions when thoughts of suicide arise.</p>
+<p>2]<b>Dialectical Behavior Therapy (DBT) </b>has been shown to reduce suicidal behavior in adolescents. DBT has also been shown to reduce the rate of suicide in adults with borderline personality disorder, a mental illness characterized by an ongoing pattern of varying moods, self-image, and behavior that often results in impulsive actions and problems in relationships. A therapist trained in DBT can help a person recognize when their feelings or actions are disruptive or unhealthy and teach the person skills that can help them cope more effectively with upsetting situations.</p>
+</div>
+</div>
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-sitting-with-head-in-hands-384.jpg" alt="suicide">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#"> Are You Feeling Suicidal? </a>
+                            </div>
+                            <div class="card_info">
+                               How to deal with suicidal thoughts and feelings
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/distressed-young-man-resting-chin-on-railing-768.jpg
+                            " width="100px" alt="suicide">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Suicide Prevention </a>
+                            </div>
+                            <div class="card_info">
+                                How to help someone who is suicidal and save a life
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/teen-girl-comforting-sad-friend-768.jpg" width="100px" alt="suicide">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Suicide Grief: Coping with a loved One's Suicide</a>
+                            </div>
+                            <div class="card_info">
+                                Surviving the tragedy and trauma of suicide
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-folded-arms-gazing-out-768.jpg
+                            "
+                             alt="suicide">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Depression Symtoms and Warnings</a>
+                            </div>
+                            <div class="card_info">
+                                Recognizning depression and getting the help you need
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-sitting-on-park-bench-384.jpg
+                            " width="100px" alt="suicide">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Coping with depression</a>
+                            </div>
+                            <div class="card_info">
+                                Tips for overcoming depression and one step at a time
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-reclining-in-couch-looking-at-therapist-768.jpg
+    " width="100px" alt="suicide">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Depresson Treatment</a>
+                            </div>
+                            <div class="card_info">
+                                Therapy,medication and lifestyle changes that can help you can feel better 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <footer class="footer">
+            <div class="upper_footer">
+                <div class="media_icons">
+                    <!-- Twitter -->
+                    <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+    ></a>
+                    
+                    <!-- Instagram -->
+                    <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                    " role="button"><i class="fab fa-instagram"></i
+    ></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                    https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+    ></a>
+                </div>
+                <div class="web_info ">
+                    <a href="ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>
+                </div>
+            </div>
+            <div class="lower_footer ">
+            </div>
+            
+            <a href="chatbot/database.html" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+        </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script>
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="Common\auth.js"></script>
+</html>

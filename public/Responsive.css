@@ -1,0 +1,138 @@
+@media only screen and (max-width: 400px) {
+  .slider {
+    visibility: hidden;
+  }
+  .carousel-inner {
+    visibility: hidden;
+  }
+  .Slider_button {
+    visibility: hidden;
+  }
+  .highights {
+    margin-top: 3%;
+    background-color: #f1f1f1;
+  }
+  .Responsive_card {
+    visibility: visible;
+    margin-top: -20%;
+    top: 32%;
+    left: 5%;
+    height: 30vh;
+    width: 30%;
+    position: absolute;
+    background-color: silver;
+  }
+  .Responsive_card img {
+    width: 90vw;
+    height: 30vh;
+  }
+  .WeCare_help {
+    margin: 2%;
+  }
+  .help_cards {
+    margin: 3% 3%;
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .help_card {
+    margin: 3% 3%;
+    background-color: #ffced2;
+    align-self: center;
+    width: 96%;
+    justify-content: center;
+    height: 35%;
+  }
+  .WeCare_middle_class {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 95%;
+    margin: 0 3%;
+  }
+  .middle_Card {
+    background-color: powderblue;
+    align-self: center;
+    width: 90%;
+    margin: 5% 0%;
+    justify-content: center;
+    height: 70%;
+  }
+  .article_Cards {
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 98%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .article_card {
+    height: 100%;
+    width: 98%;
+    margin: 5% 0%;
+  }
+  .override_button {
+    text-align: center;
+    color: white;
+    background-color: rgba(95, 158, 160, 0.664);
+    font-weight: bold;
+    position: absolute;
+    top: 80%;
+    border: 1px solid #f1f1f1;
+    border-radius: 10%;
+    height: 18%;
+    width: 25%;
+    left: 40%;
+    text-align: center;
+  }
+  .footer {
+    margin-top: 10%;
+    background-color: #2b3358;
+    height: 50vh;
+  }
+  .upper_footer {
+    margin-right: 30%;
+    background-color: #2b3358;
+    height: 80%;
+  }
+  .media_icons {
+    position: relative;
+    left: 40%;
+    margin-right: 40vw;
+    padding: 4%;
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .web_info {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
+  .info {
+    margin-right: 30%s;
+  }
+  .chat-bot {
+    position: fixed;
+    text-decoration: none;
+    right: 5%;
+    bottom: 5%;
+    width: 15%;
+    height: 8%;
+    display: block;
+    border-radius: 100%;
+    border: 2px solid white;
+    box-shadow: 0 0 30px 0 rgba(black, 0.3);
+    font-size: 0px;
+    background: url("https://cdn-icons-png.flaticon.com/512/3649/3649460.png")
+      no-repeat center;
+    background-size: cover;
+  }
+}

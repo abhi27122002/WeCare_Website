@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons links--->
+    <!-- Font Awesome -->
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icons links over--->
+
+    <!-- css links--->
+    <link rel="stylesheet" href="Common\index.css">
+    <link rel="stylesheet" href="Common\Responsive.css">
+    <link rel="stylesheet" href="Common\addiction.css">
+    <link rel="stylesheet" href="Common/Add.css">
+    <!-- Script links--->
+    <script src="Common\index.js"></script>
+    <title>WeCare</title>
+</head>
+<body>
+    <body id="body">
+        <header1 class="header1" id="header1">
+            <!-- MENU icons code--->
+    
+            <div class="menu_box_">
+                <div>
+                    <button class="btn btn-light" onclick="openNav()"> 
+                          ☰
+                        </button>
+                </div>
+            </div>
+            <!-- Menu-->
+    
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html">
+                <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+            </a>
+    
+    
+    
+            <div class="SingUp_bar">
+                <div>
+                    <div class="dropdown1">
+                        <button class="dropbtn1">
+                                <i class="material-icons" style="font-size:24px">account_circle</i>
+                              </button>
+                        <div class="dropdown-content1">
+                            <a href="#modal2" class="modal-trigger">Login</a>
+                            <a href="#modal1" class="modal-trigger">SignUp</a>
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <!-- sing up Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Sign Up</h4>
+                    <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                        <input type="email" name="" id="signUpEmail" placeholder="email" />
+    
+                        <input type="password" id="signUpPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+    
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+    
+    
+    
+            <!-- log in up Modal Structure -->
+            <div id="modal2" class="modal" onsubmit="login(event)">
+                <div class="modal-content">
+                    <h4>Login</h4>
+                    <form action="" autocomplete="off">
+                        <input type="email" name="" id="LoginEmail" placeholder="email" />
+    
+                        <input type="password" id="LoginPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+            </div>
+    
+        </header1>
+    
+        <!-- SideNav Code-->
+        <div id="mySideNav" class="SideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+            <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Addiction_.html">Addication</a>
+                    <a href="Stress_.html">Stress</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sucide.html">Suicide</a>
+                    <a href="Depression.html">Depression</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+                <hr>
+            </h5>
+            <div class="col2">
+    
+                <div class="sidemenu1">
+                    <a href="Communication.html">Communication</a>
+                   
+                </div>
+                <div class="sidemenu1">
+                    <a href="Friendship.html">Friendship</a>
+                    
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Happyness.html">Happiness</a>
+                    <a href="Meditation.html">Meditation</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sleep_.html">Sleep</a>
+                    <a href="Career_.html">Career</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+                <hr>
+            </h5>
+            <div class="col2">
+                    <a href="ContactUs.html">Contact Us</a>
+            </div>
+        </div>
+        <!-- SideNav Ends-->
+        <!-- SideNav Ends-->
+        <section>
+
+            <div class="container" style="margin-top:3%; width: 80%">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 style="padding-top:10%;">Depression</h2>
+                        <p style="font-size: 18px; ">Depression is more than just feeling sad. It drains your optimism, energy, and drive. It can seem like there’s no way out. But no matter how bad you feel, there’s always hope. Read on to learn about symptoms, treatment, and recovery.</p>
+                    </div>
+                    <div class="col-md-5" style="text-align:right;">
+                        <img src="https://www.helpguide.org/wp-content/uploads/depression-360.jpg" alt="Depression">
+                    </div>
+                    <div>
+                    </div>
+        </section>
+        <br><br>
+        <div style="width:100% ; height: 6px;  background-color: burlywood;"></div>
+        <div class="addBody">
+            <!--youtube video-->
+            
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/vpO_3ZegQL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 7vh;"></iframe>
+    <div class="aligment">
+        <div class="book">
+            <img src="https://cdn.asaha.com/assets/thumbs/35b/35bea1418f8d7b49a8869ac220d37bd7.jpg" alt="">
+            <h5>Download ebook</h5>
+            <p>"overcoming Depression"</p>
+            <a href="#" onclick="window.open('Books/Overcoming Depression.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+        </div>
+    
+        <div class="book">
+                <img src="https://cdn.asaha.com/assets/thumbs/631/631fc3e5d26dd3884490965ba5d77197.jpg" alt="">
+                <h5>Download ebook</h5>
+                <p>"Depression self help"</p>
+                <a href="#" onclick="window.open('Books/Depression self help.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+        </div>
+
+        <div class="book">
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/51jQpaF9WvL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg" alt="">
+            <h5>Order from Amazon</h5>
+            <p>"Thank you Depression"</p>
+            <a href="https://read.amazon.in/kp/embed?asin=B098R4BHZK&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_GRX4EC3HA6FWGH388Z7S" >Click here</a>
+    </div>
+</div>
+<h2>What Is Depression?</h2>
+<h5 style="margin-top: 20px;">"Depression is a medical condition that affects your mood and ability to function. Depression types include clinical depression, bipolar depression, dysthymia, seasonal affective disorder and others. Treatment options range from counseling to medications to brain stimulation and complementary therapies."  </h5>
+<div class="labels">
+<h5><a href="#Types">What are the types of depression?</a> || <a href="#symtoms">Symtoms of Depression</a> || <a href="#Treatment">How is depression syndrome treated?</a> </h5>
+</div>
+
+<p>Depressive symptoms include feeling sad, anxious or hopeless. The condition can also cause difficulty with thinking, memory, eating and sleeping. A diagnosis of major depressive disorder (clinical depression) means you have felt sad, low or worthless most days for at least two weeks while also having other symptoms such as sleep problems, loss of interest in activities, or change in appetite.
+</p>
+<p>Stress can also help you rise to meet challenges. It’s what keeps you on your toes during a presentation at work, sharpens your concentration when you’re attempting the game-winning free throw, or drives you to study for an exam when you’d rather be watching TV. But beyond a certain point, stress stops being helpful and starts causing major damage to your health, mood, productivity, relationships, and your quality of life.</p>
+ <p>Without treatment, depression can get worse and last longer. In severe cases, it can lead to self-harm or death. Fortunately, treatments can be very effective in improving symptoms of depression.</p>
+<h3>
+<div>
+    <a  name="Types">What are the types of depression?</a>
+</div>
+</h3>
+<p>Healthcare providers name depression types according to symptoms and causes. These episodes often have no obvious cause. In some people, they can linger much longer than in others for no clear reason.</p>
+<p>Types of depression include:</p>
+<div style="margin-left: 2.6%;">
+    <ol type="a">
+        <li><b>Major depressive disorder (MDD):</b> Major depression (clinical depression) has intense or overwhelming symptoms that last longer than two weeks. These symptoms interfere with everyday life</li>
+    <li><b>Bipolar depression:</b>People with bipolar disorder have alternating periods of low mood and extremely high-energy (manic) periods. During the low period, they may have depression symptoms such as feeling sad or hopeless or lacking energy.</li>
+  <li><b>Psychotic depression: </b> People with psychotic depression have severe depressive symptoms and delusions or hallucinations. Delusions are beliefs in things that are not based in reality, while hallucinations involve seeing, hearing, or feeling touched by things that aren’t actually there.</li>
+    <li><b>Perinatal and postpartum depression :</b>“Perinatal” means around birth. Many people refer to this type as postpartum depression. Perinatal depression can occur during pregnancy and up to one year after having a baby. Symptoms go beyond “the baby blues,” which causes minor sadness, worry or stress.</li>
+</ol>
+</div>
+<h3>
+    <div>
+        <a  name="symptoms">What are the symptoms of depression?</a>
+    </div>
+</h3>
+<div style="margin-left: 2.6%;">
+    <p>Depression can affect your emotions, mind and body. Depression symptoms include:</p>
+    <ol>
+        <li>Feeling very sad, hopeless or worried.</li>
+        <li>Not enjoying things that used to give you joy.</li>
+        <li>Being easily irritated or frustrated.</li>
+        <li>Eating too much or too little.</li>
+        <li>Changes in how much you sleep.</li>
+    </ol>
+</div>
+
+
+<h3>
+<div>
+    <a  name="Treatment">How is depression syndrome treated?</a>
+</div>
+</h3>
+<p>Depression can be serious, but it’s also treatable. Treatment for depression includes:</p>
+<p>1] <b>Self-help:</b> Regular exercise, getting enough sleep, and spending time with people you care about can improve depression symptoms.</p>
+</p>
+<p>2] <b>Counseling: </b>Counseling or psychotherapy is talking with a mental health professional. Your counselor helps you address your problems and develop coping skills. Sometimes brief therapy is all you need. Other people continue therapy longer.</p>
+<p>3] <b>Brain stimulation therapy:</b>Brain stimulation therapy can help people who have severe depression or depression with psychosis. Types of brain stimulation therapy include electroconvulsive therapy (ECT), transcranial magnetic stimulation (TMS) and vagus nerve stimulation (VNS).</p>
+</div>
+</div>
+
+
+      
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-folded-arms-gazing-out-768.jpg" alt="Depression">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Depression Symtoms and Warnings</a>
+                            </div>
+                            <div class="card_info">
+                               Recognizing depression and getting the help you need
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-woman-smiling-in-video-call-window-on-laptop-display-768.jpg
+                            " width="100px" alt="Depression">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Online terapy </a>
+                            </div>
+                            <div class="card_info">
+                                Finding and choosing an online therapist or counselor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-man-arms-folded-over-knees-at-window-768.jpg
+                            " width="100px" alt="Depression">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Dealing with depression During Coronavirus</a>
+                            </div>
+                            <div class="card_info">
+                                Improving your mood at this diificult time
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-man-sitting-at-window-768.jpg
+                            "
+                             alt="Depression">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Depression in Men</a>
+                            </div>
+                            <div class="card_info">
+                                What it looks like and how to get help
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-sitting-on-park-bench-384.jpg
+                            " width="100px" alt="Depression">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Coping with depression</a>
+                            </div>
+                            <div class="card_info">
+                                Tips for overcoming depression and one step at a time
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-reclining-in-couch-looking-at-therapist-768.jpg
+    " width="100px" alt="Depression">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Depresson Treatment</a>
+                            </div>
+                            <div class="card_info">
+                                Therapy,medication and lifestyle changes that can help you can feel better 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+
+
+
+        <footer class="footer">
+            <div class="upper_footer">
+                <div class="media_icons">
+                    <!-- Twitter -->
+                    <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+    ></a>
+                    
+                    <!-- Instagram -->
+                    <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                    " role="button"><i class="fab fa-instagram"></i
+    ></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                    https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+    ></a>
+                </div>
+                <div class="web_info ">
+                    <div class="info">
+                        <a href="ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>
+                </div>
+            </div>
+            <div class="lower_footer ">
+            </div>
+            
+            <a href="chatbot/database.html" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+        </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script>
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="Common\auth.js"></script>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons links--->
+    <!-- Font Awesome -->
+ 
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icons links over--->
+
+    <!-- css links--->
+    <link rel="stylesheet" href="Common\index.css">
+    <link rel="stylesheet" href="Common\Responsive.css">
+    <link rel="stylesheet" href="Common\addiction.css">
+    <link rel="stylesheet" href="Common/Add.css">
+    <link rel="stylesheet" href="Books/fundamental of meditation.pdf">
+    <!-- Script links--->
+    <script src="Common\index.js"></script>
+    <title>WeCare</title>
+</head>
+<body>
+    <body id="body">
+        <header1 class="header1" id="header1">
+            <!-- MENU icons code--->
+    
+            <div class="menu_box_">
+                <div>
+                    <button class="btn btn-light" onclick="openNav()"> 
+                          ☰
+                        </button>
+                </div>
+            </div>
+            <!-- Menu-->
+    
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html">
+                <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+            </a>
+    
+    
+    
+    
+            <div class="SingUp_bar">
+                <div>
+                    <div class="dropdown1">
+                        <button class="dropbtn1">
+                                <i class="material-icons" style="font-size:24px">account_circle</i>
+                              </button>
+                        <div class="dropdown-content1">
+                            <a href="#modal2" class="modal-trigger">Login</a>
+                            <a href="#modal1" class="modal-trigger">SignUp</a>
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <!-- sing up Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Sign Up</h4>
+                    <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                        <input type="email" name="" id="signUpEmail" placeholder="email" />
+    
+                        <input type="password" id="signUpPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+    
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+    
+    
+    
+            <!-- log in up Modal Structure -->
+            <div id="modal2" class="modal" onsubmit="login(event)">
+                <div class="modal-content">
+                    <h4>Login</h4>
+                    <form action="" autocomplete="off">
+                        <input type="email" name="" id="LoginEmail" placeholder="email" />
+    
+                        <input type="password" id="LoginPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+            </div>
+    
+        </header1>
+    
+        <!-- SideNav Code-->
+        <div id="mySideNav" class="SideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+            <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Addiction_.html">Addication</a>
+                    <a href="Stress_.html">Stress</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sucide.html">Suicide</a>
+                    <a href="Depression.html">Depression</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+                <hr>
+            </h5>
+            <div class="col2">
+    
+                <div class="sidemenu1">
+                    <a href="Communication.html">Communication</a>
+                   
+                </div>
+                <div class="sidemenu1">
+                    <a href="Friendship.html">Friendship</a>
+                    
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Happyness.html">Happiness</a>
+                    <a href="Meditation.html">Meditation</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sleep_.html">Sleep</a>
+                    <a href="Career_.html">Career</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+                <hr>
+            </h5>
+            <div class="col2">
+               
+                    <a href="ContactUs.html">Contact Us</a>
+            
+            </div>
+        </div>
+        <!-- SideNav Ends-->
+        <!-- SideNav Ends-->
+        <section>
+
+            <div class="container" style="margin-top:3%; width: 80%">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 style="padding-top:10%;">Meditations</h2>
+                        <p style="font-size: 18px; ">Meditation has many benefits. It reduces stress, increases calm and focus, and promotes greater physical and emotional well-being. Anyone can do it, and the rewards can come quickly. These guided meditations will help you get starte</p>
+                    </div>
+                    <div class="col-md-5" style="text-align:right;">
+                        <img src="https://www.helpguide.org/wp-content/uploads/audio-meditations-360.jpg" alt="Addiction">
+                    </div>
+                </div>
+
+                    </div>
+        </section>
+        <br><br>
+        <div style="width:100% ; height: 6px;  background-color: burlywood;"></div>
+
+        <div class="addBody">
+            <!--youtube video-->
+            
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/dOIfslwvU_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 7vh;"></iframe>
+    <div class="aligment">
+        <div class="book">
+            <img src="https://m.media-amazon.com/images/I/41KYheTMQmL.jpg" alt="">
+            <h5>Download ebook</h5>
+            <p>Meditation-for-Beginners-Book</p>
+            <a href="#" onclick="window.open('Books/Meditation-for-Beginners-Book-1.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+        </div>
+    
+        <div class="book">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41veoECiWCL._SX460_BO1,204,203,200_.jpg" alt="">
+                <h5>Download ebook</h5>
+                <p>The Fundamentals of Meditation Practice</p>
+                <a href="#" onclick="window.open('Books/fundamental of meditation.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+        </div>
+
+        <div class="book">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/415bfZ07LIL._SX360_BO1,204,203,200_.jpg" alt="">
+            <h5>Order from Amazon</h5>
+            <p>Meditation for Daily Stress: 10 Practices for Immediate Well-being </p>
+            <a href="https://www.amazon.in/Meditation-Daily-Stress-Practices-Well-being/dp/1419724053/ref=sr_1_2_sspa?crid=P2O27I6VJ9SG&keywords=meditation+practice&qid=1642428250&sprefix=the+fmeditation+practice%2Caps%2C518&sr=8-2-spons&psc=1&smid=A3H3WE9M6NY1KV&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyS0dTMThBTzZaOTY2JmVuY3J5cHRlZElkPUEwMzk2NTQ5MzJNMVhTWEtFWjVTOCZlbmNyeXB0ZWRBZElkPUEwMjI4NDk0WlkxVjc3TDBDRTE1JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==" >Click here</a>
+    </div>
+</div>
+        
+        <h2>Meditation</h2>
+        <div class="labels">
+        <h5><a href="#sysmtoms">Benifits</a> || <a href="#Treatment">Types</a> </h5>
+    </div>
+        <h5 style="margin-top: 20px;">How do you learn to meditate? In mindfulness meditation, we’re learning how to pay attention to the breath as it goes in and out, and notice when the mind wanders from this task. This practice of returning to the breath builds the muscles of attention and mindfulness..</h5>
+        
+        <h3>
+        <div>
+            <a  name="sysmtoms">Why meditation is beneficial</a>
+        </div>
+    </h3>
+    <p>There’s plenty of evidence supporting the numerous benefits of meditation.</p>
+    <p>Meditation can offer general health and mental/emotional benefits, including:</p>
+    <div style="margin-left: 2.6%;">
+        <p>1] lower blood pressure</p>
+        <p>2] reduced stress</p>
+       <p>3] better sleep</p> 
+        <p>4] improved emotional regulation</p>
+        <p> 5] increased focus</p>
+        <p>6] enhanced mood</p>
+       <p> 7] reduced aggression</p>
+        <p> 8] greater adaptability</p>
+        <p>9] healthier aging process</p>
+        
+    </div>
+
+        <h3>
+            <div>
+                <a  name="Treatment">Types</a>
+            </div>
+        </h3>
+        <p>There are nine popular types of meditation practice:</p>
+    
+        <ul style="margin: 2.6%;">
+            <li>1] mindfulness meditation</li>
+            <li>2] spiritual meditation</li>
+            <li>3] focused meditation</li>
+            <li>4] movement meditation</li>
+            <li>5] mantra meditation</li>
+            <li>6] transcendental meditation</li>
+            <li>7] progressive relaxation</li>
+            <li>8] visualization meditation</li>
+          </ul>  
+    </div>
+</div>
+
+
+
+
+        <footer class="footer">
+            <div class="upper_footer">
+                <div class="media_icons">
+                    <!-- Twitter -->
+                    <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+    ></a>
+                    
+                    <!-- Instagram -->
+                    <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                    " role="button"><i class="fab fa-instagram"></i
+    ></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                    https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+    ></a>
+                </div>
+                <div class="web_info ">
+                    <div class="info">
+                        <a href="ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>
+                    </div>
+                </div>
+            </div>
+            <div class="lower_footer ">
+            </div>
+            
+            <a href="chatbot/database.html" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+        </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script>
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="Common\auth.js"></script>
+</html>

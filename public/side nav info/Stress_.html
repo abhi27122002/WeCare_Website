@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons links--->
+    <!-- Font Awesome -->
+  
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icons links over--->
+
+    <!-- css links--->
+    <link rel="stylesheet" href="Common\index.css">
+    <link rel="stylesheet" href="Common\Responsive.css">
+    <link rel="stylesheet" href="Common\addiction.css">
+    <link rel="stylesheet" href="Common/Add.css">
+    <!-- Script links--->
+    <script src="Common\index.js"></script>
+    <title>WeCare</title>
+</head>
+<body>
+    <body id="body">
+        <header1 class="header1" id="header1">
+            <!-- MENU icons code--->
+    
+            <div class="menu_box_">
+                <div>
+                    <button class="btn btn-light" onclick="openNav()"> 
+                          ☰
+                        </button>
+                </div>
+            </div>
+            <!-- Menu-->
+    
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html">
+                <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+            </a>
+    
+    
+    
+    
+            <div class="SingUp_bar">
+                <div>
+                    <div class="dropdown1">
+                        <button class="dropbtn1">
+                                <i class="material-icons" style="font-size:24px">account_circle</i>
+                              </button>
+                        <div class="dropdown-content1">
+                            <a href="#modal2" class="modal-trigger">Login</a>
+                            <a href="#modal1" class="modal-trigger">SignUp</a>
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <!-- sing up Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Sign Up</h4>
+                    <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                        <input type="email" name="" id="signUpEmail" placeholder="email" />
+    
+                        <input type="password" id="signUpPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+    
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+    
+    
+    
+            <!-- log in up Modal Structure -->
+            <div id="modal2" class="modal" onsubmit="login(event)">
+                <div class="modal-content">
+                    <h4>Login</h4>
+                    <form action="" autocomplete="off">
+                        <input type="email" name="" id="LoginEmail" placeholder="email" />
+    
+                        <input type="password" id="LoginPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+            </div>
+    
+        </header1>
+    
+        <!-- SideNav Code-->
+        <div id="mySideNav" class="SideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+            <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Addiction_.html">Addication</a>
+                    <a href="Stress_.html">Stress</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sucide.html">Suicide</a>
+                    <a href="Depression.html">Depression</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+                <hr>
+            </h5>
+            <div class="col2">
+    
+                <div class="sidemenu1">
+                    <a href="Communication.html">Communication</a>
+                   
+                </div>
+                <div class="sidemenu1">
+                    <a href="Friendship.html">Friendship</a>
+                    
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Happyness.html">Happiness</a>
+                    <a href="Meditation.html">Meditation</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sleep_.html">Sleep</a>
+                    <a href="Career_.html">Career</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+                <hr>
+            </h5>
+            <div class="col2">
+                
+                    <a href="ContactUs.html">Contact Us</a>
+            
+            </div>
+        </div>
+        <!-- SideNav Ends-->
+        <!-- SideNav Ends-->
+
+        <section>
+
+            <div class="container" style="margin-top:3%; width: 80%">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 style="padding-top:10%;">Stress Management</h2>
+                        <p style="font-size: 18px; "> In small doses, stress can help you stay energized and focused. But when it’s chronic or overwhelming, it can damage your health, productivity, and well-being. Learn the warning signs and what you can do to protect yourself.</p>
+                    </div>
+                    <div class="col-md-5" style="text-align:right;">
+                        <img src="https://www.helpguide.org/wp-content/uploads/stress-management-360.jpg" alt="Stress">
+                    </div>
+                </div>
+                    </div>
+        </section>
+        <br><br>
+        <div style="width:100% ; height: 6px;  background-color: burlywood;"></div>
+    
+        <div class="addBody">
+            <!--youtube video-->
+            
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/vpO_3ZegQL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 7vh;"></iframe>
+    <div class="aligment">
+        <div class="book">
+            <img src="https://cdn.asaha.com/assets/thumbs/5ed/5ede04706ee8f78dcd602f6aed3fcbad.jpg" alt="">
+            <h5>Download ebook</h5>
+            <p>"The Stress Proof Brain"</p>
+            <a href="#" onclick="window.open('The Stress Proof Brain.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+        </div>
+    
+        <div class="book">
+                <img src="https://cdn.asaha.com/assets/thumbs/31f/31f6795b8496bc0a058b1935c86515cc.jpg" alt="">
+                <h5>Download ebook</h5>
+                <p>"The Healing power of Breadth"</p>
+                <a href="#" onclick="window.open('Books/The Healing Power of the Breath.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+        </div>
+
+        <div class="book">
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/51TS5yGAzyL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg" alt="">
+            <h5>Order from Amazon</h5>
+            <p>"Peace Of Mind"</p>
+            <a href="https://read.amazon.in/kp/embed?asin=B07M8FH6JJ&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_GA49ENPDWKBMM4ZJCCPV" >Click here</a>
+    </div>
+</div>
+<h2>What Is Stress?</h2>
+<div class="labels">
+<h5><a href="#sysmtoms">Signs and symptoms of stress overload</a> || <a href="#improve">improve ability to handel stress</a> || <a href="#help">Get Professional help</a> </h5>
+</div>
+<h5 style="margin-top: 20px;">Stress is your body’s way of responding to any kind of demand or threat. When you sense danger—whether it’s real or imagined—the body’s defenses kick into high gear in a rapid, automatic process known as the “fight-or-flight” reaction or the “stress response.”  </h5>
+<p>
+    
+The stress response is the body’s way of protecting you. When working properly, it helps you stay focused, energetic, and alert. In emergency situations, stress can save your life—giving you extra strength to defend yourself, for example, or spurring you to slam on the brakes to avoid a car accident.
+</p>
+<p>Stress can also help you rise to meet challenges. It’s what keeps you on your toes during a presentation at work, sharpens your concentration when you’re attempting the game-winning free throw, or drives you to study for an exam when you’d rather be watching TV. But beyond a certain point, stress stops being helpful and starts causing major damage to your health, mood, productivity, relationships, and your quality of life.</p>
+ <p>If you frequently find yourself feeling frazzled and overwhelmed, it’s time to take action to bring your nervous system back into balance. You can protect yourself—and improve how you think and feel—by learning how to recognize the signs and symptoms of chronic stress and taking steps to reduce its harmful effects.</p>
+<h3>
+<div>
+    <a  name="sysmtoms">Signs and symptoms of stress overload</a>
+</div>
+</h3>
+<p>The most dangerous thing about stress is how easily it can creep up on you. You get used to it. It starts to feel familiar, even normal. You don’t notice how much it’s affecting you, even as it takes a heavy toll. That’s why it’s important to be aware of the common warning signs and symptoms of stress overload.</p>
+<p>Emotional Symtoms:</p>
+<div style="margin-left: 2.6%;">
+    <ol type="a">
+        <li>Depression or general unhappiness</li>
+        <li>Anxiety and agitation</li>
+        <li>Moodiness,irriability,or anger</li>
+        <li>Feeling overwhelmed</li>
+        <li>Loneliness and isolation</li>
+      </ol>  
+</div>
+
+<p>Physical symtoms:</p>
+<div style="margin-left: 2.6%;">
+    <ol type="a">
+        <li>Aches and pains</li>
+        <li>Diarrhea or constipation</li>
+        <li>Nausea,dizziness</li>
+        <li>Chest pain,rapid heart rate</li>
+        <li>Frequent colds or flu</li>
+      </ol>  
+</div>
+
+<p>Behavioral symtoms:</p>
+<div style="margin-left: 2.6%;">
+    <ol type="a">
+        <li>Eating more or less</li>
+        <li>Sleeping too much or too little</li>
+        <li>Withdrawing from others</li>
+        <li>Procrastinating or neglacting responsibilities</li>
+        <li>Nervous Habits</li>
+      </ol>  
+</div>
+
+<h3>
+    <div>
+        <a  name="improve">Improve ability to handel stress</a>
+    </div>
+</h3>
+<div style="margin-left: 2.6%;">
+    <p>1] <span style="font-weight: bold;">Get Moving:</span>   Upping your activity level is one tactic you can employ right now to help relieve stress and start to feel better. Regular exercise can lift your mood and serve as a distraction from worries, allowing you to break out of the cycle of negative thoughts that feed stress. Rhythmic exercises such as walking, running, swimming, and dancing are particularly effective, especially if you exercise mindfully (focusing your attention on the physical sensations you experience as you move).</p>
+    <p>2] <span style="font-weight: bold;">Connect to others: </span>The simple act of talking face-to-face with another human can trigger hormones that relieve stress when you’re feeling agitated or insecure. Even just a brief exchange of kind words or a friendly look from another human being can help calm and soothe your nervous system. So, spend time with people who improve your mood and don’t let your responsibilities keep you from having a social life. If you don’t have any close relationships, or your relationships are the source of your stress, make it a priority to build stronger and more satisfying connections.</p>
+    <p>3] <span style="font-weight: bold;">Learn to relax: </span>You can’t completely eliminate stress from your life, but you can control how much it affects you. Relaxation techniques such as yoga, meditation, and deep breathing activate the body’s relaxation response, a state of restfulness that is the polar opposite of the stress response. When practiced regularly, these activities can reduce your everyday stress levels and boost feelings of joy and serenity. They also increase your ability to stay calm and collected under pressure.</p>
+    <p>4] <span style="font-weight: bold;">Eat a healthy diet: </span>The food you eat can improve or worsen your mood and affect your ability to cope with life’s stressors. Eating a diet full of processed and convenience food, refined carbohydrates, and sugary snacks can worsen symptoms of stress, while a diet rich in fresh fruit and vegetables, high-quality protein, and omega-3 fatty acids, can help you better cope with life’s ups and downs.</p>
+</div>
+
+
+<h3>
+<div>
+    <a  name="help">Get Professional help</a>
+</div>
+</h3>
+<p>If you continue to feel overwhelmed by stress, don’t be afraid to seek professional help. It doesn’t mean you’re a failure. It’s important to get help as soon as possible so you can start to feel better.</p>
+<p>Talk to your doctor about how you’re feeling. They should be able to advise you on treatment and may refer you for further help. They may suggest talking therapies such as:</p>
+<div style="margin-left: 2.6%;">
+    <p>1]<a href="https://www.mentalhealth.org"> Congnitive behavioural therapy :</a>Which can help reduce stress by changing the ways you think about stressful situation</p>
+<p>2] Brief interpersonal counselling.which can give you the chance to talk about what causes you stress and develop coping straterties</p>
+<p>3]mindfulness-based approaches</p>
+
+</p>
+</div>
+</div>
+
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/sad-and-lonely-teenager-768.jpg" alt="Stress">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Stress symtoms,signs and causes </a>
+                            </div>
+                            <div class="card_info">
+                                The harmful effects of stress and what you can do about it
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/smiling-young-woman-on-couch-leans-back-768.jpg" width="100px" alt="Stress">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Stress Management</a>
+                            </div>
+                            <div class="card_info">
+                                Using self-help techniques for dealing with stress
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-woman-at-desk-fingers-to-temples-768.jpg" width="100px" alt="Stress">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Stress at work</a>
+                            </div>
+                            <div class="card_info">
+                                How to deal with job and workplace stress
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-woman-tank-top-eyes-closed-768.jpg" alt="Stress">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Benefits of Mindfulness</a>
+                            </div>
+                            <div class="card_info">
+                                Practices for improving emotional and plysicalwell-being
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-woman-eyes-closed-hand-on-forehead-768.jpg" width="100px" alt="Stress">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Burnout Prevention and treatment</a>
+                            </div>
+                            <div class="card_info">
+                               Techniques for dealing with overwhealming stress
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/woman-wearing-bandana-mask-running-384.jpg
+                            " width="100px" alt="Stress">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Surviving Tough times by bulding Resilience</a>
+                            </div>
+                            <div class="card_info">
+                                Tips for overcoming adversity
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <footer class="footer">
+            <div class="upper_footer">
+                <div class="media_icons">
+                    <!-- Twitter -->
+                    <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+    ></a>
+                    
+                    <!-- Instagram -->
+                    <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                    " role="button"><i class="fab fa-instagram"></i
+    ></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                    https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+    ></a>
+                </div>
+                <div class="web_info ">
+                    <a href="ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>
+                </div>
+            </div>
+            <div class="lower_footer ">
+            </div>
+            
+            <a href="chatbot/database.html" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+        </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script>
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="Common\auth.js"></script>
+</html>

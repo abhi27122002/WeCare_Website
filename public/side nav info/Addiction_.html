@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons links--->
+    <!-- Font Awesome -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icons links over--->
+
+    <!-- css links--->
+    <link rel="stylesheet" href="Common\index.css">
+    <link rel="stylesheet" href="Common\Responsive.css">
+    <link rel="stylesheet" href="Common\addiction.css">
+    <link rel="stylesheet" href="Common/Add.css">
+    <link rel="stylesheet" href="Books/Basic of drug addiction.pdf">
+    <!-- Script links--->
+    <script src="Common\index.js"></script>
+    <title>WeCare</title>
+</head>
+<body>
+    <body id="body">
+        <header1 class="header1" id="header1">
+            <!-- MENU icons code--->
+    
+            <div class="menu_box_">
+                <div>
+                    <button class="btn btn-light" onclick="openNav()"> 
+                          ☰
+                        </button>
+                </div>
+            </div>
+            <!-- Menu-->
+    
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html">
+                <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+            </a>
+    
+    
+    
+    
+            <div class="SingUp_bar">
+                <div>
+                    <div class="dropdown1">
+                        <button class="dropbtn1">
+                                <i class="material-icons" style="font-size:24px">account_circle</i>
+                              </button>
+                        <div class="dropdown-content1">
+                            <a href="#modal2" class="modal-trigger">Login</a>
+                            <a href="#modal1" class="modal-trigger">SignUp</a>
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <!-- sing up Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Sign Up</h4>
+                    <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                        <input type="email" name="" id="signUpEmail" placeholder="email" />
+    
+                        <input type="password" id="signUpPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+    
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+    
+    
+    
+            <!-- log in up Modal Structure -->
+            <div id="modal2" class="modal" onsubmit="login(event)">
+                <div class="modal-content">
+                    <h4>Login</h4>
+                    <form action="" autocomplete="off">
+                        <input type="email" name="" id="LoginEmail" placeholder="email" />
+    
+                        <input type="password" id="LoginPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+            </div>
+    
+        </header1>
+    
+        <!-- SideNav Code-->
+        <div id="mySideNav" class="SideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+            <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Addiction_.html">Addication</a>
+                    <a href="Stress_.html">Stress</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sucide.html">Suicide</a>
+                    <a href="Depression.html">Depression</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+                <hr>
+            </h5>
+            <div class="col2">
+    
+                <div class="sidemenu1">
+                    <a href="Communication.html">Communication</a>
+                   
+                </div>
+                <div class="sidemenu1">
+                    <a href="Friendship.html">Friendship</a>
+                    
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Happyness.html">Happiness</a>
+                    <a href="Meditation.html">Meditation</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sleep_.html">Sleep</a>
+                    <a href="Career_.html">Career</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+                <hr>
+            </h5>
+            <div class="col2">
+                    <a href="ContactUs.html">Contact Us</a>
+            </div>
+        </div>
+        <!-- SideNav Ends-->
+        <!-- SideNav Ends-->
+       
+
+
+        <section>
+
+            <div class="container" style="margin-top:3%; width: 80%">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 style="padding-top:10%;">Addiction</h2>
+                        <p style="font-size: 18px; ">When you're stuck in the cycle of addiction, recovery can seem out of reach. But no matter how powerless you feel, change is possible with the right treatment, coping strategies, and support. Don’t give up, even if you’ve tried and
+                            failed before.</p>
+                    </div>
+                    <div class="col-md-5" style="text-align:right;">
+                        <img src="https://www.helpguide.org/wp-content/uploads/addiction-360.jpg" alt="Addiction">
+                    </div>
+                    
+                </div>
+                </div>
+                    
+
+
+
+        </section>
+        <br><br>
+        <div style="width:100% ; height: 6px; margin-bottom: 3vh;  background-color: burlywood;"></div>
+
+    
+       
+
+
+
+        <!--NEW Code -->
+        <div class="addBody">
+                <!--youtube video-->
+                <div class="aligment">
+            <iframe width="100%" class="Youtube" height="500" src="https://www.youtube.com/embed/dsTwkX1cdCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="book">
+                <img src="https://www.computerhope.com/jargon/p/pdf.png" alt="">
+                <h5>Download Full Pdf</h5>
+                <p>This pdf contains all about Addiction Causes and Treatment</p>
+                <a href="#" onclick="window.open('Books/Basic of drug addiction.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+         
+        </div>
+    </div>
+
+            <h2>What is addiction</h2>
+            <div class="labels">
+            <h5><a href="#sysmtoms">Symptoms</a> || <a href="#Treatment">Treatment</a> || <a href="#Org">Helpful Organization</a> </h5>
+        </div>
+            <h5 style="margin-top: 20px;">Addiction is an inability to stop using a substance or engaging in a behavior even though it is causing psychological and physical harm.</h5>
+            <p>The term addictionTrusted Source does not only refer to dependence on substances such as heroin or cocaine. Some addictions also involve an inability to stop partaking in activities such as gambling, eating, or working.</p>
+            <p>Addiction is a chronic condition that can also result from taking medications. In fact, the misuse of opioids — particularly illicitly made fentanyl — caused nearly 50,000 deathsTrusted Source in the United States in 2019 alone.</p>
+            <h3>
+            <div>
+                <a  name="sysmtoms">Symptoms</a>
+            </div>
+        </h3>
+        <p>The primary indications of addiction are:</p>
+        <div style="margin-left: 2.6%;">
+            <p>1] declining grades or difficulty at school</p>
+            <p>2] poor performance at work</p>
+            <p>3] relationship difficulties, which often involve lashing out at people who identify the addiction</p>
+            <p>4] an inability to stop using a substance even though it may be causing health problems or personal problems, such as issues with employment or relationships</p>
+            <p>5] a noticeable lack of energy in daily activities</p>
+            <p>6] profound changes in appearance, including weight loss and a noticeable abandonment of hygiene</p>
+            <p>7] appearing defensive when asked about substance use</p></div>
+            <h3>
+                <div>
+                    <a  name="Treatment">Treatment</a>
+                </div>
+            </h3>
+            <p>Medicinal advances and progress in diagnosis have helped the medical community develop various ways to manage and resolve addictionTrusted Source.</p>
+            <p>Some methods include:</p>
+            <div style="margin-left: 2.6%;">
+                <p>1] medication-based treatment</p>
+                <p>2] behavioral therapy and counseling</p>
+                <p>3] medical devices to treat withdrawal</p>
+                <p>4] treating related psychological factors, such as depression</p>
+        </div>
+        <p>Addiction treatment is highly personalized and often requires the support of the individual’s community or family.</p>
+        <p>Treatment can take a long time and may be complicated. Addiction is a chronic condition with a range of psychological and physical effects. Each substance or behavior may require different management techniques.</p>
+        <h3>
+            <div>
+                <a  name="Org">Helpful organizations and hotlines</a>
+            </div>
+        </h3>
+        <p>A person with addiction can find many organizations that may help them. A person can also call a hotline for help with their addiction.</p>
+        <p>The following organizations can be helpful for a person with addiction:</p>
+        <div style="margin-left: 2.6%;">
+            <p>1] <a href="https://twloha.com/">To Write Love on Her Arms:</a> This organization is dedicated to helping people with addiction, self-harm, depression, and suicide.</p>
+            <p>2] <a href="https://www.shatterproof.org/">Shatterproof: </a>This organization provides educational resources and community alliances.</p>
+            <p>3] <a href="https://facesandvoicesofrecovery.org/">Faces & Voices of Recovery:</a> This organization is dedicated to supporting and helping people with addiction, their families, and their friends.</p>
+
+            <p>4] <a href="https://amywinehousefoundation.org/">The Amy Winehouse Foundation:</a> This organization provides addiction support and music therapy.</p>
+    </div>
+    <p>Addiction treatment is highly personalized and often requires the support of the individual’s community or family.</p>
+    <p>Treatment can take a long time and may be complicated. Addiction is a chronic condition with a range of psychological and physical effects. Each substance or behavior may require different management techniques.</p>
+
+            
+            
+
+
+        </div>
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/men-and-women-sitting-in-a-circle-during-group-therapy-384.jpg" alt="addition">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#"> Helping Someone with drug addiction </a>
+                            </div>
+                            <div class="card_info">
+                                Supporting a loved one's recovery from drug abuse
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/man-with-drink-384.jpg" width="100px" alt="addition">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Alcoholism and alcohal abuse</a>
+                            </div>
+                            <div class="card_info">
+                                Recognising the sign and symptoms of a drinking problem
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/african-upset-guy-and-female-psychologist-during-therapy-384.jpg" width="100px" alt="addition">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Helping Someone with Dreinking Problem</a>
+                            </div>
+                            <div class="card_info">
+                                Tips for Helping a Loved one got sober
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-woman-checks-mobile-phone-from-bed-384.jpg" alt="addition">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#"> Smartphone addiction</a>
+                            </div>
+                            <div class="card_info">
+                                Tips for breaking free of compulsive smartphone use
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/mobile-phone-cradled-in-womans-hands-384.jpg" width="100px" alt="addition">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Social Media And Mental Health</a>
+                            </div>
+                            <div class="card_info">
+                                Changing your habits to avoid anxiety,depression,isolation and FOMO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-woman-sitting-in-window-frame-384.jpg" width="100px" alt="addition">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Cutting and Self-Harm</a>
+                            </div>
+                            <div class="card_info">
+                                How to feel better without hurting yourself and someone
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="upper_footer">
+                <div class="media_icons">
+                    <!-- Twitter -->
+                    <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+    ></a>
+                    
+                    <!-- Instagram -->
+                    <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                    " role="button"><i class="fab fa-instagram"></i
+    ></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                    https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+    ></a>
+                </div>
+                <div class="web_info ">
+                    
+                    <div class="info">
+                        <a href="ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>
+                    </div>
+                </div>
+            </div>
+            <div class="lower_footer ">
+            </div>
+            <a href="chatbot/database.html" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+        </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script>
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="Common\auth.js"></script>
+</html>

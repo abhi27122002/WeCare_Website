@@ -1,0 +1,86 @@
+.addBody {
+  margin: 0 10%;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+  font: optional;
+  font-style: normal;
+}
+
+.labels {
+  margin: 5% 0;
+}
+.book {
+  margin: 5%;
+  width: 250px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 7px #adadad;
+  box-shadow: 1px 1px 7px #adadad;
+  padding: 15px;
+}
+
+.book img {
+  width: 125px;
+}
+
+.aligment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.donation {
+  border: 5px solid silver;
+  margin: 0 20%;
+}
+
+.donation2 {
+  margin-bottom: 5%;
+  background-color: silver;
+  width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+  .aligment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .Youtube {
+    width: 100%;
+  }
+
+  .cards_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .cards_wrap .cards_item {
+    width: 80%;
+
+    margin: 10%;
+  }
+
+  .donate {
+    margin: 0;
+  }
+
+  .donation {
+    border: 5px solid silver;
+    margin: 0 0%;
+  }
+
+  .donation2 {
+    margin-bottom: 5%;
+    background-color: silver;
+    width: 100%;
+  }
+}

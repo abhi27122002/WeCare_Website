@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCare Chatbot</title>
+
+    <!-- fevicon-->
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="navbar.css">
+    <script src="E:\Third year\first sem\Project\Registration\public\index.js"></script>
+    <link rel="stylesheet" href="teachAbot.css">
+    <script src="E:\Third year\first sem\Project\Registration\public\auth.js"></script>
+    <script src="teachABot.js"></script>
+</head>
+
+<body id="body">
+    <header1 class="header1" id="header1">
+        <!-- MENU icons code--->
+
+        <div class="menu_box_">
+            <div>
+                <button class="btn btn-light" onclick="openNav()"> 
+                          ☰
+                        </button>
+            </div>
+        </div>
+        <!-- Menu-->
+
+        <a href="E:\Third year\first sem\Project\WeCare Project\index.html">
+            <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+        </a>
+
+
+
+
+        <div class="SingUp_bar">
+            <div>
+                <div class="dropdown1">
+                    <button class="dropbtn1">
+                                <i class="material-icons" style="font-size:24px">account_circle</i>
+                              </button>
+                    <div class="dropdown-content1">
+                        <a href="#modal2" class="modal-trigger">Login</a>
+                        <a href="#modal1" class="modal-trigger">SignUp</a>
+                        <a onclick="logout()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- sing up Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Sign Up</h4>
+                <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                    <input type="email" name="" id="signUpEmail" placeholder="email" />
+
+                    <input type="password" id="signUpPassword" placeholder="password" />
+
+                    <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                </form>
+
+                <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+
+            </div>
+        </div>
+
+
+
+        <!-- log in up Modal Structure -->
+        <div id="modal2" class="modal" onsubmit="login(event)">
+            <div class="modal-content">
+                <h4>Login</h4>
+                <form action="" autocomplete="off">
+                    <input type="email" name="" id="LoginEmail" placeholder="email" />
+
+                    <input type="password" id="LoginPassword" placeholder="password" />
+
+                    <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                </form>
+                <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+
+            </div>
+        </div>
+        </div>
+
+    </header1>
+
+ <!-- SideNav Code-->
+ <div id="mySideNav" class="SideNav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+    <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+        <hr>
+    </h5>
+    <div class="col2">
+        <div class="sidemenu1">
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Addiction_.html">Addication</a>
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Stress_.html">Stress</a>
+        </div>
+        <div class="sidemenu1">
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Sucide.html">Suicide</a>
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Depression.html">Depression</a>
+        </div>
+    </div>
+    <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+        <hr>
+    </h5>
+    <div class="col2">
+
+        <div class="sidemenu1">
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Communication.html">Communication</a>
+           
+        </div>
+        <div class="sidemenu1">
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Friendship.html">Friendship</a>
+            
+        </div>
+    </div>
+    <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+        <hr>
+    </h5>
+    <div class="col2">
+        <div class="sidemenu1">
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Happyness.html">Happiness</a>
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Meditation.html">Meditation</a>
+        </div>
+        <div class="sidemenu1">
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Sleep_.html">Sleep</a>
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\Career_.html">Career</a>
+        </div>
+    </div>
+    <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+        <hr>
+    </h5>
+    <div class="col2">
+        <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html"><h5 style="color: white;"> Contact Us</h5></a>
+    </div>
+</div>
+
+
+    <header class="header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col s12 m7">
+                    <div class="card">
+                        <a href="#" class="brand-logo">
+                            <div class="teach_bot">
+                                <h5>Teach Chatbot</h5>
+                            </div>
+                        </a>
+                        <div class="card-content">
+                            <label for="User Input">User Input</label>
+                            <input id="ID" type="text" />
+                            <label for="WeCare Output">WeCare Output</label>
+                            <input id="Userbox" type="text"> </input>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="select" onclick="insert()">
+                            Teach BOT  
+                              </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer class="footer">
+        <div class="upper_footer">
+            <div class="media_icons">
+                <!-- Twitter -->
+                <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+></a>
+                
+                <!-- Instagram -->
+                <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                " role="button"><i class="fab fa-instagram"></i
+></a>
+                <!-- Linkedin -->
+                <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+></a>
+            </div>
+            <div class="web_info ">
+             
+                <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>
+          
+            </div>
+        </div>
+        <div class="lower_footer ">
+        </div>
+        <a href="E:\Third year\first sem\Project\WeCare 2\public\chatbot\database.html" onclik="chat_bot_work()" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+    </footer>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="auth.js"></script>
+
+</html>

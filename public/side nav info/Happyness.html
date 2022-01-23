@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons links--->
+    <!-- Font Awesome -->
+   
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icons links over--->
+
+    <!-- css links--->
+    <link rel="stylesheet" href="Common\index.css">
+    <link rel="stylesheet" href="Common\Responsive.css">
+    <link rel="stylesheet" href="Common\addiction.css">
+    <link rel="stylesheet" href="Common/Add.css">
+    <link rel="stylesheet" href="Books/Restiting Happiness.pdf">
+    
+    <!-- Script links--->
+    <script src="Common\index.js"></script>
+    <title>WeCare</title>
+</head>
+<body>
+    <body id="body">
+        <header1 class="header1" id="header1">
+            <!-- MENU icons code--->
+    
+            <div class="menu_box_">
+                <div>
+                    <button class="btn btn-light" onclick="openNav()"> 
+                          ☰
+                        </button>
+                </div>
+            </div>
+            <!-- Menu-->
+    
+            <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html">
+                <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+            </a>
+    
+    
+    
+    
+            <div class="SingUp_bar">
+                <div>
+                    <div class="dropdown1">
+                        <button class="dropbtn1">
+                                <i class="material-icons" style="font-size:24px">account_circle</i>
+                              </button>
+                        <div class="dropdown-content1">
+                            <a href="#modal2" class="modal-trigger">Login</a>
+                            <a href="#modal1" class="modal-trigger">SignUp</a>
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <!-- sing up Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Sign Up</h4>
+                    <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                        <input type="email" name="" id="signUpEmail" placeholder="email" />
+    
+                        <input type="password" id="signUpPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+    
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+    
+    
+    
+            <!-- log in up Modal Structure -->
+            <div id="modal2" class="modal" onsubmit="login(event)">
+                <div class="modal-content">
+                    <h4>Login</h4>
+                    <form action="" autocomplete="off">
+                        <input type="email" name="" id="LoginEmail" placeholder="email" />
+    
+                        <input type="password" id="LoginPassword" placeholder="password" />
+    
+                        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                    </form>
+                    <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                            loginWithGoogle
+                        </button>
+    
+                </div>
+            </div>
+            </div>
+    
+        </header1>
+    
+        <!-- SideNav Code-->
+        <div id="mySideNav" class="SideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+            <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Addiction_.html">Addication</a>
+                    <a href="Stress_.html">Stress</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sucide.html">Suicide</a>
+                    <a href="Depression.html">Depression</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+                <hr>
+            </h5>
+            <div class="col2">
+    
+                <div class="sidemenu1">
+                    <a href="Communication.html">Communication</a>
+                   
+                </div>
+                <div class="sidemenu1">
+                    <a href="Friendship.html">Friendship</a>
+                    
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+                <hr>
+            </h5>
+            <div class="col2">
+                <div class="sidemenu1">
+                    <a href="Happyness.html">Happiness</a>
+                    <a href="Meditation.html">Meditation</a>
+                </div>
+                <div class="sidemenu1">
+                    <a href="Sleep_.html">Sleep</a>
+                    <a href="Career_.html">Career</a>
+                </div>
+            </div>
+            <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+                <hr>
+            </h5>
+            <div class="col2">
+                    <a href="ContactUs.html">Contact Us</a>
+            </div>
+        </div>
+        <!-- SideNav Ends-->
+        <!-- SideNav Ends-->
+        <section>
+
+            <div class="container" style="margin-top:3%; width: 80%">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2 style="padding-top:10%;">Well-being & happiness</h2>
+                        <p style="font-size: 18px; ">Looking after your emotional well-being is just as important as caring for your physical health. By actively nurturing wellness, you’re better able to handle life’s challenges and bounce back when bad things happen. </p>
+                    </div>
+                    <div class="col-md-5" style="text-align:right;">
+                        <img src="https://www.helpguide.org/wp-content/uploads/wellness-360.jpg" alt="Happiness">
+                    </div>
+                </div>
+                    </div>
+        </section>
+        <br><br>
+        <div style="width:100% ; height: 6px;  background-color: burlywood;"></div>
+
+        <!--NEW Code -->
+        <div class="addBody">
+            <!--youtube video-->
+            
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/VAn8t80lclM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 5vh;"></iframe>
+                <h5>Download and Buy Books from here:</h5>
+<div class="aligment">
+
+    <div class="book">
+        <img src="https://www.computerhope.com/jargon/p/pdf.png" alt="">
+        <h5>Download Full Pdf</h5>
+        <p>This pdf contains all about how to deliver happiness</p>
+        <a href="#" onclick="window.open('Books/Delivering Happiness - Tony Hsieh.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+    </div>
+
+    <div class="book">
+        <img src="https://cdn.asaha.com/assets/thumbs/de8/de8a31519dcfda3a9becaa262314af73.jpg" alt="">
+        <h5>Download Full Pdf</h5>
+        <p>The Myths of Happiness: What Should Make You Happy, but Doesn't, What Shouldn't Make You Happy, but Does</p>
+        <a href="#" onclick="window.open('Books/The Myths of Happiness.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+    </div>
+
+    <div class="book">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/51r95uN0B-L._SX326_BO1,204,203,200_.jpg" alt="">
+        <h5>Order from Amazon</h5>
+        <p>The Art of Happiness: A Handbook for Living </p>
+        <a href="https://www.amazon.in/Art-Happiness-Handbook-Living/dp/0340750154/ref=sr_1_3?crid=26H5DYYPP29HV&keywords=happiness&qid=1642411506&sprefix=happness%2Caps%2C1620&sr=8-3" >Click here</a>
+    </div>
+    
+</div>
+
+<div class="aligment">
+
+    <div class="book">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/31kNX+5zIdL._SX331_BO1,204,203,200_.jpg" alt="">
+        <h5>Order from Amazon</h5>
+        <p>Happiness Habits: The Urban Professional’s Guide To Good Living </p>
+        <a href="https://www.amazon.in/Happiness-Habits-Urban-Professionals-Living/dp/1685867383/ref=sr_1_5?crid=26H5DYYPP29HV&keywords=happiness&qid=1642411506&sprefix=happness%2Caps%2C1620&sr=8-5" >Click here</a>
+        </div>
+    <div class="book">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41bGydPNhJL._SX317_BO1,204,203,200_.jpg" alt="">
+            <h5>Order from Amazon</h5>
+            <p>The Happiness Advantage</p>
+            <a href="https://www.amazon.in/Happiness-Advantage-Principles-Success-Performance/dp/0753539470/ref=sr_1_13?crid=26H5DYYPP29HV&keywords=happiness&qid=1642411506&sprefix=happness%2Caps%2C1620&sr=8-13" >Click here</a>
+    </div>
+    
+    <div class="book">
+        <img src="https://cdn.asaha.com/assets/thumbs/bf9/bf93b21ca6f860b22862fb495157ee5e.jpg" alt="">
+        <h5>Download Full Pdf</h5>
+        <p>Resisting Happiness: A True Story about Why We Sabotage Ourselves</p>
+        <a href="#" onclick="window.open('Books/Restiting Happiness.pdf', '_blank', 'fullscreen=yes'); return false;">Click here</a>
+    </div>
+
+</div>
+
+        <h2>What Is Happiness?</h2>
+        <div class="labels">
+        <h5><a href="#sysmtoms">How to Know If You're Happy</a> || <a href="#Treatment">Types of Happiness</a> || <a href="#Org">Impact of Happiness</a> </h5>
+    </div>
+        <h5 style="margin-top: 20px;">Happiness is an emotional state characterized by feelings of joy, satisfaction, contentment, and fulfillment. While happiness has many different definitions, it is often described as involving positive emotions and life satisfaction. </h5>
+        <p>When most people talk about happiness, they might be talking about how they feel in the present moment, or they might be referring to a more general sense of how they feel about life overall..</p>
+        <p>Because happiness tends to be such a broadly defined term, psychologists and other social scientists typically use the term 'subjective well-being' when they talk about this emotional state. Just as it sounds, subjective well-being tends to focus on an individual's overall personal feelings about their life in the present. </p>
+        <h3>
+        <div>
+            <a  name="sysmtoms">How to Know If You're Happy</a>
+        </div>
+    </h3>
+    <p>While perceptions of happiness may be different from one person to the next, there are some key signs that psychologists look for when measuring and assessing happiness.</p>
+    <p>Some key signs of happiness include:</p>
+    <div style="margin-left: 2.6%;">
+        <p>1] Feeling like you are living the life you wanted</p>
+        <p>2] Feeling that the conditions of your life are good</p>
+        <p>3] Feeing that you have accomplished (or will accomplish) what you want in life</p>
+        <p>4] Feeling satisfied with your lifes</p>
+        <p>5] Feeling positive more than negative</p>
+        </div>
+        
+        <h3>
+            <div>
+                <a  name="Treatment">Types of Happiness</a>
+            </div>
+        </h3>
+        <p>There are many different ways of thinking about happiness. For example, the ancient Greek philosopher Aristotle made a distinction between two different kinds of happiness: hedonia and eudaimonia.</p>
+    
+        <div style="margin-left: 2.6%;">
+            <p>1] <span style="font-weight: bold;">Hedonic:</span>  happiness is derived from pleasure. It is most often associated with doing what feels good, self-care, fulfilling desires, experiencing enjoyment, and feeling a sense of satisfaction.</p>
+            <p> 2] <span style="font-weight: bold;">udaimonia: </span>EThis type of happiness is derived from seeking virtue and meaning. Important components of eudaimonic well-being including feeling that your life has meaning, value, and purpose. It is associated more with fulfilling responsibilities, investing in long-term goals, concern for the welfare of other people, and living up to personal ideals.</p>
+    </div>
+
+    
+    <h3>
+        <div>
+            <a  name="Org">Impact of Happiness</a>
+        </div>
+    </h3>
+    <p>Happiness has been shown to predict positive outcomes in many different areas of life.</p>
+    <div style="margin-left: 2.6%;">
+        <p>1] Positive emotions increase satisfaction with life.</p>
+        <p>2] Happiness helps people build stronger coping skills and emotional resources.</p>
+        <p>3] Positive emotions are linked to better health and longevity. One study found that people who experienced more positive emotions than negative ones were more likely to have survived over a 13 year period.</p>
+        <p>4] Positive feelings increase resilience. Resilience helps people better manage stress and bounce back better when faced with setbacks. For example, one study found that happier people tend to have lower levels of the stress hormone cortisol and that these benefits tend to persist over time.</p>
+    </div>
+</div>
+
+        
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/closeup-of-young-couples-smiling-to-camera-384.jpg
+                            " alt="Happiness">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Cultivating Happiness</a>
+                            </div>
+                            <div class="card_info">
+                         Five tips to get more satisfaction and joy out of life
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/illustration-gears-in-head-384.jpg" width="100px" alt="Happiness">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Buliding Better Mental Health</a>
+                            </div>
+                            <div class="card_info">
+                         Six strategies to boost your mood and build resilience 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/elderly-woman-swing-mouth-agape-glee-husband-behind-384.jpg
+                            " width="100px" alt="Happiness">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">The Benefits of Play for Adults</a>
+                            </div>
+                            <div class="card_info">
+                         How to play boosts creativity, learning, and mood
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="wrapper" style="padding-top: 7%;">
+            <div class="cards_wrap">
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/he-is-such-a-good-boy-picture-384.jpg
+                            " alt="Happiness">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">How Dogs Boost the Mental Health of Children,Adults, and the Elderly</a>
+                            </div>
+                            <div class="card_info">
+                                The effects of dogs on mental health
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/young-man-teaching-youngsters-surrounding-384.jpg
+                            " width="100px" alt="Happiness">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Volunteering and its Benefits</a>
+                            </div>
+                            <div class="card_info">
+                               How giving to others makes you healthier and happier
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards_item">
+                    <div class="cards_inner">
+                        <div class="cards_top">
+                            <img id="images" src="https://www.helpguide.org/wp-content/uploads/grandparents-cuddling-granddaughter-384.jpg
+                            "
+                             width="100px" alt="Happiness">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                                <a style="font-size: 18px; color:skyblue;" href="#">Laughter is the Best Medicine</a>
+                            </div>
+                            <div class="card_info">
+                        The health Benefits of humor and Laughter
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+
+
+
+        <footer class="footer">
+            <div class="upper_footer">
+                <div class="media_icons">
+                    <!-- Twitter -->
+                    <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                    </a>
+    
+                    <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+    ></a>
+                    
+                    <!-- Instagram -->
+                    <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                    " role="button"><i class="fab fa-instagram"></i
+    ></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                    https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+    ></a>
+                </div>
+                <div class="web_info ">
+                    <div class="info">
+                        <a href="ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>
+                    </div>
+                </div>
+            </div>
+            <div class="lower_footer ">
+            </div>
+            
+            <a href="chatbot/database.html" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+        </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script>
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="Common\auth.js"></script>
+</html>

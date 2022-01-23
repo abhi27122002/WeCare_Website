@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <!-- css links--->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Responsive.css">
+
+
+
+
+    <!-- Icons links--->
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+
+
+
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/mathijssen/tuxlets/256/Nurse-Tux-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Script links--->
+    <script src="index.js"></script>
+
+
+ 
+
+    <title>WeCare</title>
+</head>
+
+<body id="body">
+    <header1 class="header1" id="header1">
+        <!-- MENU icons code--->
+
+        <div class="menu_box_">
+            <div>
+                <button class="btn btn-light" onclick="openNav()"> 
+                      ☰
+                    </button>
+            </div>
+        </div>
+        <!-- Menu-->
+
+        <a href="E:\Third year\first sem\Project\WeCare 2\public\main.html">
+            <p class="header_name"> <span style="font-size: 36px;">WeCare</span> </p>
+        </a>
+
+
+
+
+        <div class="SingUp_bar">
+            <div>
+                <div class="dropdown1">
+                    <button class="dropbtn1">
+                            <i class="material-icons" style="font-size:24px">account_circle</i>
+                          </button>
+                    <div class="dropdown-content1">
+                        <a href="#modal2" class="modal-trigger">Login</a>
+                        <a href="#modal1" class="modal-trigger">SignUp</a>
+                        <a onclick="logout()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <!-- sing up Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Sign Up</h4>
+                <form action="" autocomplete="off" onsubmit=" SignUp(event)">
+                    <input type="email" name="" id="signUpEmail" placeholder="email" />
+
+                    <input type="password" id="signUpPassword" placeholder="password" />
+
+                    <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                </form>
+
+                <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                        loginWithGoogle
+                    </button>
+
+            </div>
+        </div>
+
+
+
+        <!-- log in up Modal Structure -->
+        <div id="modal2" class="modal" onsubmit="login(event)">
+            <div class="modal-content">
+                <h4>Login</h4>
+                <form action="" autocomplete="off">
+                    <input type="email" name="" id="LoginEmail" placeholder="email" />
+
+                    <input type="password" id="LoginPassword" placeholder="password" />
+
+                    <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">Submit</button>
+                </form>
+                <button onclick="loginWithGoogle()" class="btn waves-effect blue">
+                        loginWithGoogle
+                    </button>
+
+            </div>
+        </div>
+        </div>
+
+    </header1>
+
+    <!-- SideNav Code-->
+    <div id="mySideNav" class="SideNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+        <a href="CovidApi.html" class="Corona">Covid Statistics</a>
+      
+        <h5 style="color:whitesmoke; font-size:30px; text-align:center;margin-top: 20%;">Mental Health
+            <hr>
+        </h5>
+     
+        <div class="col2">
+            <div class="sidemenu1">
+                <a href="side nav info\Addiction_.html">Addication</a>
+                <a href="side nav info\Stress_.html">Stress</a>
+            </div>
+            <div class="sidemenu1">
+                <a href="side nav info/Sucide.html">Suicide</a>
+                <a href="side nav info/Depression.html">Depression</a>
+            </div>
+        </div>
+        <h5 style="color:whitesmoke; font-size:30px;  text-align:center">Relationships
+            <hr>
+        </h5>
+        <div class="col2">
+
+            <div class="sidemenu1">
+                <a href="side nav info/Communication.html">Communication</a>
+               
+            </div>
+            <div class="sidemenu1">
+                <a href="side nav info/Friendship.html">Friendship</a>
+                
+            </div>
+        </div>
+        <h5 style="color:whitesmoke; text-align: center; font-size: 30px;  margin-bottom: 8%;">Health & Wellness
+            <hr>
+        </h5>
+        <div class="col2">
+            <div class="sidemenu1">
+                <a href="side nav info/Happyness.html">Happiness</a>
+                <a href="side nav info/Sleep_.html">Sleep</a>
+            </div>
+            <div class="sidemenu1">
+                <a href="side nav info/Career_.html">Career</a>
+                <a href="side nav info/Meditation.html">Meditation</a>
+            </div>
+        </div>
+        <h5 style="color:whitesmoke; font-size:30px ; text-align: center; margin-bottom: 8%">More
+            <hr>
+        </h5>
+        <div class="col2">
+                <a href="side nav info/ContactUs.html">Contact Us</a>
+        </div>
+    </div>
+    <!-- SideNav Ends-->
+    <!-- SideNav Ends-->
+
+
+
+
+    <!--WeCare Highlight -->
+
+   
+    <div class="highights">
+        <h5 style="margin: 0 3%;margin-bottom: 1.5%;">WeCare Highlights</h5>
+        <div class="slider">
+            <ul class="slides">
+                <li class="list_card">
+                    <a href="side nav info/Communication.html">
+                    <div class="cards">
+                        <!--1st cards-->
+                        <div class="card">
+                            <img src="https://www.helpguide.org/wp-content/uploads/young-mother-young-daughter-make-heart-sign-with-fingers-768.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p> <a class="card-title">Communication</a></p>
+                                <h5 class="card-text">Nonverbal communication </h>
+                            </div>
+                        </div>
+                    </a>
+
+                        <!--2st cards-->
+
+                        <a href="side nav info/Meditation.html">
+                        <div class="card">
+                            <img src="https://www.helpguide.org/wp-content/uploads/resistance-band-woman-doing-leg-workout-768.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p> <a class="card-title">Meditation</a></p>
+                                <h5 class="card-text">Meditation tips</h>
+                            </div>
+                        </div>
+                    </a>
+
+
+                        <!--3rd cards-->
+                        <a href="side nav info/Career_.html">
+                        <div class="card">
+                            <img src="https://www.helpguide.org/wp-content/uploads/overhead-view-womans-hands-laptop-keyboard-384.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p> <a class="card-title">Career</a></p>
+                                <h5 class="card-text">Fulfilling career</h>
+                            </div>
+                        </div>
+                </a>
+
+
+
+                </li>
+                <li class="list_card">
+
+
+                    <div class="cards">
+                        <!--4st cards-->
+                        <a href="side nav info/Sleep_.html">
+                        <div class="card">
+                            <img src="https://www.helpguide.org/wp-content/uploads/young-businessman-works-late-at-night-in-a-dimly-lit-room-he-is-tired-384.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p> <a class="card-title">Sleep</a></p>
+                                <h5 class="card-text">Sleep well</h>
+                            </div>
+                        </div>
+                    </a>
+
+                        <!--5st cards-->
+                    <a href="side nav info\Stress_.html">
+                        <div class="card">
+                            <img src="https://www.helpguide.org/wp-content/uploads/smiling-young-woman-on-couch-leans-back-768.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p> <a class="card-title">Stress</a></p>
+                                <h5 class="card-text">It can damage your health, productivity.</h5>
+                            </div>
+                        </div>
+                    </a>
+
+                        <!--6st cards-->
+                        <a href="side nav info/Depression.html">
+                        <div class="card">
+                            <img src="https://www.helpguide.org/wp-content/uploads/woman-sitting-on-park-bench-768.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p> <a class="card-title">Depression</a></p>
+                                <h5 class="card-text">Coping with Depression</h>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+
+    <!--WeCare Highlight Ends-->
+
+
+
+    <!--How does WeCare help you?-->
+
+    <div class="WeCare_help">
+        <h4 style="text-align:center;margin-bottom: 3%;">
+            How does WeCare help you?
+        </h4>
+        <div class="help_cards" style="margin-bottom: 5%;">
+            <div class="help_card">
+                <img src="https://www.helpguide.org/wp-content/uploads/two-hands-icon.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5>
+                        <p class="card-title">We don’t just educate you—we empower you.</p>
+                    </h5>
+                    <p class="card-text">We offer the guidance and encouragement you need to find hope, get motivated, take charge of your mental health, and start feeling better.</p>
+                </div>
+            </div>
+
+            <div class="help_card" style="background-color: #ef8243;">
+                <img src="https://www.helpguide.org/wp-content/uploads/lightbulb-icon.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5>
+                        <p class="card-title">We highlight what you need to know to help yourself.</p>
+                    </h5>
+                    <p class="card-text">We focus on what you need to know to understand the challenges you face, make informed decisions, and take positive steps.</p>
+                </div>
+            </div>
+
+
+            <div class="help_card" style="background-color: #58c3c3;">
+                <img src="https://www.helpguide.org/wp-content/uploads/no-ads-icon.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5>
+                        <p class="card-title">Our website is 100% ad-free and not for profit.</p>
+                    </h5>
+                    <p class="card-text">We don’t accept advertising, sell anything, or answer to corporate sponsors. The result: a better online experience and integrity you can trust.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="WeCare_middle_class">
+            <div class="middle_Card">
+                <img src="https://www.helpguide.org/wp-content/uploads/globe.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5>
+                        <p class="card-title">ABOUT US</p>
+                    </h5>
+                    <p class="card-text">WeCare is an independent nonprofit that provides free mental health education and support.</p>
+                    <a href="#"><span style="font-weight: bold; color: black;"> LEARN MORE</span> </a>
+                </div>
+            </div>
+
+            
+            <div class="middle_Card">
+                <img src="https://static.thenounproject.com/png/3396138-200.png" class=" card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5>
+                        <p class="card-title ">Donate for our future </p>
+                    </h5>
+                    <p class="card-text ">Our mission is to provide empowering, evidence-based mental health content you can use to help yourself and your loved ones.</p>
+                    <a  href="side nav info/Donate.html"><span style="font-weight: bold; color: black; "> Donate</span> </a>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+
+    <h4 style="text-align: center; margin-top: 5%;">Explore our Feed</h4>
+    <article class="article_Cards">
+
+       
+        <div class="article_card">
+            <img src="https://cache.desktopnexus.com/thumbseg/730/730933-bigthumbnail.jpg" alt="Snow">
+            <h3 class="override_text" style="position:absolute;">Explore our Meditations</h3>
+           
+            <button class="override_button" href="" 
+            onclick="window.location.href = 'side nav info/Meditation.html';">LEARN MORE  </button>
+            
+        </div> 
+        <div class="article_card">
+            <img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500s" alt="Snow">
+            <h3 class="override_text" style="position:absolute;">Coronavirus & Mental Health</h3>
+
+            <button class="override_button" href="" 
+            onclick="window.location.href = 'CovidApi.html';">LEARN MORE  </button>
+        </div>
+    </article>
+
+    <div class="Responsive_card">
+        <img src="https://www.helpguide.org/wp-content/uploads/young-mother-young-daughter-make-heart-sign-with-fingers-768.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p> <a class="card-title">Communication</a></p>
+            <h5 class="card-text">Nonverbal communication </h>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="upper_footer">
+            <div class="media_icons">
+                <!-- Twitter -->
+                <a class="btn btn-primary" style="background-color: #55acee;  margin:0 2%;" href="https://twitter.com/WE_CARE_4U?t=TChRl-eEEgWPlSC6XhidsQ&s=08" role="button"><i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="btn btn-primary" style="background-color: #3b5998;  margin:0 2%; font-size: larger;" href="https://www.facebook.com/login/" role="button"><i class="fab fa-facebook-f"></i
+></a>
+                
+                <!-- Instagram -->
+                <a class="btn btn-primary" style="background-color: #ac2bac; margin:0 2%;" href="https://instagram.com/wecare4079?utm_medium=copy_link
+                " role="button"><i class="fab fa-instagram"></i
+></a>
+                <!-- Linkedin -->
+                <a class="btn btn-primary" style="background-color: #0082ca; margin:0 2%;" href="
+                https://www.linkedin.com/home" role="button"><i class="fab fa-linkedin-in"></i
+></a>
+            </div>
+            <div class="web_info ">
+                <a href="E:\Third year\first sem\Project\WeCare 2\public\side nav info\ContactUs.html"><h5 style="color: white;"> Contact Us</h5></a>                  
+        
+                            </div>
+        </div>
+        <div class="lower_footer ">
+        </div>
+        <a href="side nav info/chatbot/database.html" target="_self" class="chat-bot" title="Chat-Bot">WeCare Bot</a>
+    </footer>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyACdk98NMDPGvnX1GmUSDezqDgvbA4uPBk",
+        authDomain: "fir-project-de910.firebaseapp.com",
+        projectId: "fir-project-de910",
+        storageBucket: "fir-project-de910.appspot.com",
+        messagingSenderId: "981820027846",
+        appId: "1:981820027846:web:daecb9750daf3bc7fc78c7"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script>
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="auth.js"></script>
+
+</html>
